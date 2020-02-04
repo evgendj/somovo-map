@@ -63,16 +63,16 @@ function init () {
         listBoxItems = [
             new ymaps.control.ListBoxItem({
                 data: {
-                    content: 'Москва',
-                    center: [55.751574, 37.573856],
-                    zoom: 9
+                    content: 'Центральный',
+                    center: [51.669067, 39.195238],
+                    zoom: 13
                 }
             }),
             new ymaps.control.ListBoxItem({
                 data: {
-                    content: 'Омск',
-                    center: [54.990215, 73.365535],
-                    zoom: 9
+                    content: 'Коминтерновский',
+                    center: [51.696303, 39.184861],
+                    zoom: 13
                 }
             })
         ],
