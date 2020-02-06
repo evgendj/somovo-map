@@ -104,8 +104,72 @@ function init () {
                     item.data.get('center'),
                     item.data.get('zoom')
                 );
+                objectManager.setFilter('properties.content == "' + item.data.get('content') + '"');
             }
         });
 
     myMap.controls.add(listBox, {float: 'left'});
+
+
+    /* Добавление точек Начало */
+
+    // При выборе района просто происходит перемещение по карте, ничего больше делать не нужно. (скрывать, показывать и тп)
+
+    objectManager = new ymaps.ObjectManager({
+        clusterize: true,
+        gridSize: 32,
+        clusterDisableClickZoom: true
+    });
+
+
+    var data = {};
+
+    data.type     = "FeatureCollection";
+    data.features = [];
+
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    // 1 Точка
+    var obj = {
+        "type": "Feature",
+        "id": 0,
+        "geometry": {
+            "type": "Point",
+            "coordinates": [51.670516, 39.213824]
+        },
+        "properties": {
+            "content": "Центральный",
+            "balloonContentHeader": "Заголовок 1",
+            "balloonContentBody": "Текст 1",
+            "balloonContentFooter": "Еще текст 1",
+            "clusterCaption": "Подсказка 1"
+        }
+    };
+    data.features.push(obj);
+
+    // 2 Точка
+    var obj = {
+        "type": "Feature",
+        "id": 1,
+        "geometry": {
+            "type": "Point",
+            "coordinates": [51.693732, 39.162343]
+        },
+        "properties": {
+            "content": "Коминтерновский",
+            "balloonContentHeader": "Заголовок 2",
+            "balloonContentBody": "Текст 2",
+            "balloonContentFooter": "Еще текст 2",
+            "clusterCaption": "Подсказка 2"
+        }
+    };
+    data.features.push(obj);
+
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    objectManager.add(data);
+    myMap.geoObjects.add(objectManager);
+
+    /* Добавление точек Конец */
+
 }
