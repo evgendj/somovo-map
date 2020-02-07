@@ -95,12 +95,19 @@ function init () {
               center: [51.694914, 39.165648],
               zoom: 12
           }
-      }),
+        }),
+        new ymaps.control.ListBoxItem({
+          data: {
+              content: 'Железнодорожный',
+              center: [51.698236, 39.296542],
+              zoom: 12
+          }
+        }),
             new ymaps.control.ListBoxItem({
                 data: {
-                    content: 'Железнодорожный',
-                    center: [51.698236, 39.296542],
-                    zoom: 12
+                    content: 'Другие',
+                    center: [51.674438, 39.212217],
+                    zoom: 5
                 }
             })
         ],
@@ -235,6 +242,21 @@ var obj = {
         "content": "Ленинский",
         "balloonContentHeader": "Мини-рынок Моисеева",
         "balloonContentBody": "ул. Моисеева, 59"
+      }
+};
+data.features.push(obj);
+
+var obj = {
+    "type": "Feature",
+    "id": 23,
+    "geometry": {
+        "type": "Point",
+        "coordinates": [51.662663, 39.18418]
+    },
+    "properties": {
+        "content": "Ленинский",
+        "balloonContentHeader": "Свободы 69",
+        "balloonContentBody": "ул. Свободы, 69"
       }
 };
 data.features.push(obj);
@@ -552,12 +574,12 @@ var obj = {
     "id": 100,
     "geometry": {
         "type": "Point",
-        "coordinates": [51.688097, 39.1348]
+        "coordinates": [51.737255, 39.291152]
     },
     "properties": {
         "content": "Железнодорожный",
-        "balloonContentHeader": "45-й Стрелковой Дивизии",
-        "balloonContentBody": "ул. 45-й Стрелковой Дивизии, 259/4"
+        "balloonContentHeader": "Электровозная",
+        "balloonContentBody": "ул. Электровозная улица, 29"
       }
 };
 data.features.push(obj);
@@ -567,12 +589,12 @@ var obj = {
     "id": 101,
     "geometry": {
         "type": "Point",
-        "coordinates": [51.688097, 39.1348]
+        "coordinates": [51.719672, 39.271056]
     },
     "properties": {
         "content": "Железнодорожный",
-        "balloonContentHeader": "45-й Стрелковой Дивизии",
-        "balloonContentBody": "ул. 45-й Стрелковой Дивизии, 259/4"
+        "balloonContentHeader": "РИМ",
+        "balloonContentBody": "ул. Богдана Хмельницкого, 40"
       }
 };
 data.features.push(obj);
@@ -582,12 +604,12 @@ var obj = {
     "id": 102,
     "geometry": {
         "type": "Point",
-        "coordinates": [51.688097, 39.1348]
+        "coordinates": [51.742202, 39.368667]
     },
     "properties": {
         "content": "Железнодорожный",
-        "balloonContentHeader": "45-й Стрелковой Дивизии",
-        "balloonContentBody": "ул. 45-й Стрелковой Дивизии, 259/4"
+        "balloonContentHeader": "Сомово",
+        "balloonContentBody": "ул. Дачный проспект, 15"
       }
 };
 data.features.push(obj);
@@ -597,31 +619,62 @@ var obj = {
     "id": 103,
     "geometry": {
         "type": "Point",
-        "coordinates": [51.688097, 39.1348]
+        "coordinates": [51.743312, 39.361211]
     },
     "properties": {
         "content": "Железнодорожный",
-        "balloonContentHeader": "45-й Стрелковой Дивизии",
-        "balloonContentBody": "ул. 45-й Стрелковой Дивизии, 259/4"
+        "balloonContentHeader": "Сомово",
+        "balloonContentBody": "ул. Речная, 32"
+      }
+};
+data.features.push(obj);
+
+// Другие
+
+var obj = {
+    "type": "Feature",
+    "id": 120,
+    "geometry": {
+        "type": "Point",
+        "coordinates": [51.766332, 39.591701]
+    },
+    "properties": {
+        "content": "Другие",
+        "balloonContentHeader": "с. Орлово",
+        "balloonContentBody": "ул. Свободы, 65"
       }
 };
 data.features.push(obj);
 
 var obj = {
     "type": "Feature",
-    "id": 104,
+    "id": 121,
     "geometry": {
         "type": "Point",
-        "coordinates": [51.688097, 39.1348]
+        "coordinates": [51.318947, 39.214364]
     },
     "properties": {
-        "content": "Железнодорожный",
-        "balloonContentHeader": "45-й Стрелковой Дивизии",
-        "balloonContentBody": "ул. 45-й Стрелковой Дивизии, 259/4"
+        "content": "Другие",
+        "balloonContentHeader": "Нововоронеж",
+        "balloonContentBody": "ул. Победы, 1"
       }
 };
 data.features.push(obj);
 
+var obj = {
+    "type": "Feature",
+    "id": 122,
+    "geometry": {
+        "type": "Point",
+        "coordinates": [56.315311, 38.135963]
+    },
+    "properties": {
+        "content": "Другие",
+        "balloonContentHeader": "Московская обл.",
+        "balloonContentBody": "г. Сергиев Посад"
+      }
+};
+data.features.push(obj);
 
     /* Образец
     var obj = {
